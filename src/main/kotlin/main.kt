@@ -1,8 +1,13 @@
 fun  main () {
-     var likes = 5
-     if (likes ==1){ println("Вам поставили $likes лайк")} else  if (likes >=2 && likes <= 4)
-     {println("Вам поставили $likes лайка")} else if (likes >=4 && likes <= 21) { println("Вам поставили $likes лайков")}
-}
+     val likes = 353556
+
+     val textLikes = if (likes % 10 == 1 && likes % 100 !== 11) "Вам поставили $likes лайк" else
+          if (likes % 10 in 2..4 && likes % 100 !in 11..19) "Вам поставили $likes лайка"
+               else "Вам поставили $likes лайков"
+
+          println (textLikes)
+     }
+
 
 
 
